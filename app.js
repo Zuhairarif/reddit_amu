@@ -42,6 +42,10 @@ const departments = [
 departments.forEach(dept => {
   const collection = db.collection(`threads_${dept}`);
 
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
   // Render department page with threads
   app.get(`/${dept}`, async (req, res) => {
     const threads = await collection.find().sort({ _id: -1 }).toArray();
