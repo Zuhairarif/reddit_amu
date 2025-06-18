@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
     const thread = {
       title,
       content,
-      timestamp: new Date().toLocaleString(),
+      timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
       id: Math.floor(Math.random() * 100000),
       user: `User-${Math.floor(Math.random() * 10000)}`,
       comments: []
@@ -78,7 +78,7 @@ app.get('/', (req, res) => {
     const commentObj = {
       content: comment,
       user: `User-${Math.floor(Math.random() * 10000)}`,
-      timestamp: new Date().toLocaleString()
+      timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
     };
 
     await collection.updateOne(
