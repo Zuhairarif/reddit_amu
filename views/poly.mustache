@@ -54,12 +54,27 @@
       width: 100px;
       height: auto;
     }
+@media (max-width: 768px) {
+  .logo-image {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    top: 0;
+    left: 0;
+  }
+
+  header {
+    padding-top: 10px; /* Add some spacing after logo */
+  }
+}
+
   </style>
 </head>
 <body>
 
   <!-- Logo -->
-  <img src="logo/polytechnic.jpg" style="height: 100px; width: 400px;" alt="Logo" class="logo-image">
+  <img src="logo/polytechnic.jpg"  alt="Logo" class="logo-image">
 
   <!-- Tagline -->
   <header class="bg-light py-3 text-center">
